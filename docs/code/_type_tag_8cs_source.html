@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>Wheel.Development.Log4Me: Fichero Fuente src/Config/Entities/TypeTag.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Logo_Small.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Wheel.Development.Log4Me
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_55be27304aee4fac13a1eb8fc08f58b6.html">Config</a></li><li class="navelem"><a class="el" href="dir_516fa8d2d242fe53ac26a4424a2dc555.html">Entities</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">TypeTag.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Xml.Serialization;</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_wheel.html">Wheel</a>.<a class="code" href="namespace_wheel_1_1_development.html">Development</a>.<a class="code" href="namespace_wheel_1_1_development_1_1_log4_me.html">Log4Me</a>.<a class="code" href="namespace_wheel_1_1_development_1_1_log4_me_1_1_entities.html">Entities</a>;</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_wheel.html">Wheel</a>.<a class="code" href="namespace_wheel_1_1_development.html">Development</a>.<a class="code" href="namespace_wheel_1_1_development_1_1_log4_me.html">Log4Me</a>.<a class="code" href="namespace_wheel_1_1_development_1_1_log4_me_1_1_writers.html">Writers</a>;</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_wheel.html">Wheel</a>.Development.Log4Me.Config.Entities</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;{</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    [XmlType(TypeName = <span class="stringliteral">&quot;Type&quot;</span>)]</div><div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="class_wheel_1_1_development_1_1_log4_me_1_1_config_1_1_entities_1_1_type_tag.html">   31</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_wheel_1_1_development_1_1_log4_me_1_1_config_1_1_entities_1_1_type_tag.html">TypeTag</a></div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    {</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        [XmlIgnore]</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keyword">public</span> <a class="code" href="class_wheel_1_1_development_1_1_log4_me_1_1_entities_1_1_tipo.html">Tipo</a> Nombre</div><div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="class_wheel_1_1_development_1_1_log4_me_1_1_config_1_1_entities_1_1_type_tag.html#a5bd38aa6b18ac31d48c2fa12260e359e">   58</a></span>&#160;        {</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            <span class="keyword">get</span></div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            {</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                <span class="keywordflow">return</span> <a class="code" href="class_wheel_1_1_development_1_1_log4_me_1_1_entities_1_1_tipo.html">Tipo</a>.ToEnumeracion(_Nombre);</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            }</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <span class="keyword">set</span></div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            {</div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                _Nombre = value == null ? value.Codigo : null;</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            }</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        }</div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        [XmlAttribute(AttributeName = <span class="stringliteral">&quot;Name&quot;</span>)]</div><div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="class_wheel_1_1_development_1_1_log4_me_1_1_config_1_1_entities_1_1_type_tag.html#aa7b2d3dba68174de58bc8cf73ac2916f">   93</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">string</span> _Nombre { <span class="keyword">get</span>; <span class="keyword">set</span>; }</div><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div><div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        [XmlIgnore]</div><div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        <span class="keyword">public</span> <a class="code" href="class_wheel_1_1_development_1_1_log4_me_1_1_entities_1_1_nivel.html">Nivel</a> <a class="code" href="class_wheel_1_1_development_1_1_log4_me_1_1_entities_1_1_nivel.html">Nivel</a></div><div class="line"><a name="l00120"></a><span class="lineno"><a class="line" href="class_wheel_1_1_development_1_1_log4_me_1_1_config_1_1_entities_1_1_type_tag.html#a774aa8c91d4b419ec8225c6fa127470e">  120</a></span>&#160;        {</div><div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            <span class="keyword">get</span></div><div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;            {</div><div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;                <span class="keywordflow">return</span> <a class="code" href="class_wheel_1_1_development_1_1_log4_me_1_1_entities_1_1_nivel.html">Nivel</a>.ToEnumeracion(_Nivel) as <a class="code" href="class_wheel_1_1_development_1_1_log4_me_1_1_entities_1_1_nivel.html">Nivel</a>;</div><div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;            }</div><div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;            <span class="keyword">set</span></div><div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;            {</div><div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;                _Nivel = value == null ? value.Codigo : null;</div><div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;            }</div><div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        }</div><div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div><div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        [XmlAttribute(AttributeName = <span class="stringliteral">&quot;Level&quot;</span>)]</div><div class="line"><a name="l00155"></a><span class="lineno"><a class="line" href="class_wheel_1_1_development_1_1_log4_me_1_1_config_1_1_entities_1_1_type_tag.html#a166c04588cc8017072f8bf4828885b25">  155</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">string</span> _Nivel { <span class="keyword">get</span>; <span class="keyword">set</span>; }</div><div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;</div><div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        [XmlIgnore]</div><div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        <span class="keyword">public</span> <a class="code" href="class_wheel_1_1_development_1_1_log4_me_1_1_writers_1_1_modo.html">Modo</a> <a class="code" href="class_wheel_1_1_development_1_1_log4_me_1_1_writers_1_1_modo.html">Modo</a></div><div class="line"><a name="l00182"></a><span class="lineno"><a class="line" href="class_wheel_1_1_development_1_1_log4_me_1_1_config_1_1_entities_1_1_type_tag.html#a62356528f93404f2d666f00052598422">  182</a></span>&#160;        {</div><div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;            <span class="keyword">get</span></div><div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;            {</div><div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;                <span class="keywordflow">return</span> <a class="code" href="class_wheel_1_1_development_1_1_log4_me_1_1_writers_1_1_modo.html">Modo</a>.ToEnumeracion(_Modo);</div><div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;            }</div><div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;            <span class="keyword">set</span></div><div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;            {</div><div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;                _Modo = value == null ? value.Codigo : null;</div><div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;            }</div><div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        }</div><div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;</div><div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;        [XmlAttribute(AttributeName = <span class="stringliteral">&quot;Mode&quot;</span>)]</div><div class="line"><a name="l00217"></a><span class="lineno"><a class="line" href="class_wheel_1_1_development_1_1_log4_me_1_1_config_1_1_entities_1_1_type_tag.html#a3a70383dc61304ffe54b48c99be5862d">  217</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">string</span> _Modo { <span class="keyword">get</span>; <span class="keyword">set</span>; }</div><div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    }</div><div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;}</div><div class="ttc" id="namespace_wheel_html"><div class="ttname"><a href="namespace_wheel.html">Wheel</a></div></div>
+<div class="ttc" id="class_wheel_1_1_development_1_1_log4_me_1_1_entities_1_1_nivel_html"><div class="ttname"><a href="class_wheel_1_1_development_1_1_log4_me_1_1_entities_1_1_nivel.html">Wheel.Development.Log4Me.Entities.Nivel</a></div><div class="ttdoc">Enumeración de los niveles de mensajes disponibles. </div><div class="ttdef"><b>Definition:</b> <a href="_nivel_8cs_source.html#l00030">Nivel.cs:30</a></div></div>
+<div class="ttc" id="namespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div></div>
+<div class="ttc" id="namespace_wheel_1_1_development_1_1_log4_me_1_1_writers_html"><div class="ttname"><a href="namespace_wheel_1_1_development_1_1_log4_me_1_1_writers.html">Wheel.Development.Log4Me.Writers</a></div><div class="ttdef"><b>Definition:</b> <a href="_a_log_writer_8cs_source.html#l00008">ALogWriter.cs:8</a></div></div>
+<div class="ttc" id="namespace_wheel_1_1_development_html"><div class="ttname"><a href="namespace_wheel_1_1_development.html">Wheel.Development</a></div></div>
+<div class="ttc" id="namespace_wheel_1_1_development_1_1_log4_me_html"><div class="ttname"><a href="namespace_wheel_1_1_development_1_1_log4_me.html">Wheel.Development.Log4Me</a></div></div>
+<div class="ttc" id="namespace_wheel_1_1_development_1_1_log4_me_1_1_entities_html"><div class="ttname"><a href="namespace_wheel_1_1_development_1_1_log4_me_1_1_entities.html">Wheel.Development.Log4Me.Entities</a></div><div class="ttdef"><b>Definition:</b> <a href="_excepcion_t_o_8cs_source.html#l00002">ExcepcionTO.cs:2</a></div></div>
+<div class="ttc" id="class_wheel_1_1_development_1_1_log4_me_1_1_entities_1_1_tipo_html"><div class="ttname"><a href="class_wheel_1_1_development_1_1_log4_me_1_1_entities_1_1_tipo.html">Wheel.Development.Log4Me.Entities.Tipo</a></div><div class="ttdoc">Enumeración de los tipos de registros de Log4Me. </div><div class="ttdef"><b>Definition:</b> <a href="_tipo_8cs_source.html#l00030">Tipo.cs:30</a></div></div>
+<div class="ttc" id="class_wheel_1_1_development_1_1_log4_me_1_1_config_1_1_entities_1_1_type_tag_html"><div class="ttname"><a href="class_wheel_1_1_development_1_1_log4_me_1_1_config_1_1_entities_1_1_type_tag.html">Wheel.Development.Log4Me.Config.Entities.TypeTag</a></div><div class="ttdoc">Tag que representa el tipo del registro que de cumplir ciertas condiciones, se deben excluir...</div><div class="ttdef"><b>Definition:</b> <a href="_type_tag_8cs_source.html#l00031">TypeTag.cs:31</a></div></div>
+<div class="ttc" id="class_wheel_1_1_development_1_1_log4_me_1_1_writers_1_1_modo_html"><div class="ttname"><a href="class_wheel_1_1_development_1_1_log4_me_1_1_writers_1_1_modo.html">Wheel.Development.Log4Me.Writers.Modo</a></div><div class="ttdoc">Enumeración de los modos de los writers disponibles. </div><div class="ttdef"><b>Definition:</b> <a href="_modo_8cs_source.html#l00028">Modo.cs:28</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.11
+</small></address>
+</body>
+</html>

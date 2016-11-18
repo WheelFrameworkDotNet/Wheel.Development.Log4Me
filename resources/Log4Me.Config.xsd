@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<xs:element name="Log4MeConfig">
+		<xs:complexType>
+			<xs:sequence maxOccurs="1" minOccurs="0">
+				<xs:element name="Writers">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="ALogWriter"></xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="ALogWriter" type="_ALogWriter" abstract="true"></xs:element>
+
+	<xs:complexType name="_Type">
+		<xs:attribute name="Name">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="*"></xs:enumeration>
+					<xs:enumeration value="Start"></xs:enumeration>
+					<xs:enumeration value="Parameter"></xs:enumeration>
+					<xs:enumeration value="Variable"></xs:enumeration>
+					<xs:enumeration value="Exception"></xs:enumeration>
+					<xs:enumeration value="Message"></xs:enumeration>
+					<xs:enumeration value="Return"></xs:enumeration>
+					<xs:enumeration value="Identifier"></xs:enumeration>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="Level">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="*"></xs:enumeration>
+					<xs:enumeration value="Alert"></xs:enumeration>
+					<xs:enumeration value="Debug"></xs:enumeration>
+					<xs:enumeration value="Error"></xs:enumeration>
+					<xs:enumeration value="Fatal"></xs:enumeration>
+					<xs:enumeration value="Info"></xs:enumeration>
+					<xs:enumeration value="Success"></xs:enumeration>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="Mode">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="On"></xs:enumeration>
+					<xs:enumeration value="Off"></xs:enumeration>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:complexType>
+
+	<xs:complexType name="_ALogWriter" abstract="true">
+		<xs:sequence>
+			<xs:element name="Includes" minOccurs="0" maxOccurs="1">
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="Include" type="Filtro"></xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Excludes" minOccurs="0" maxOccurs="1">
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="Exclude" type="Filtro"></xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Types" minOccurs="0" maxOccurs="1">
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="Type" type="_Type" minOccurs="0" maxOccurs="unbounded"></xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+
+		<xs:attribute name="Mode" use="required">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="On"></xs:enumeration>
+					<xs:enumeration value="Off"></xs:enumeration>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="OutPutSeparator" type="xs:string"></xs:attribute>
+		<xs:attribute name="OutPutFormat" type="xs:string"></xs:attribute>
+		<xs:attribute name="OutPutForzeAllFields" type="xs:boolean"></xs:attribute>
+		<xs:attribute name="SkipSaveFormat" type="xs:boolean"></xs:attribute>
+	</xs:complexType>
+
+	<xs:complexType name="CondicionSimple">
+		<xs:attribute name="Contains" type="xs:string" use="optional"></xs:attribute>
+		<xs:attribute name="NotContains" type="xs:string" use="optional"></xs:attribute>
+		<xs:attribute name="EndWith" type="xs:string" use="optional"></xs:attribute>
+		<xs:attribute name="NotEndWith" type="xs:string" use="optional"></xs:attribute>
+		<xs:attribute name="Equals" type="xs:string" use="optional"></xs:attribute>
+		<xs:attribute name="NotEquals" type="xs:string" use="optional"></xs:attribute>
+		<xs:attribute name="FullEquals" type="xs:string" use="optional"></xs:attribute>
+		<xs:attribute name="NotFullEquals" type="xs:string" use="optional"></xs:attribute>
+		<xs:attribute name="StartWith" type="xs:string" use="optional"></xs:attribute>
+		<xs:attribute name="NotStartWith" type="xs:string" use="optional"></xs:attribute>
+		<xs:attribute name="IgnoreCase" type="xs:boolean" use="optional"></xs:attribute>
+	</xs:complexType>
+
+	<xs:complexType name="Class">
+		<xs:complexContent mixed="false">
+			<xs:extension base="CondicionSimple">
+				<xs:attribute name="isPublic" type="xs:boolean"></xs:attribute>
+				<xs:attribute name="isPrivate" type="xs:boolean"></xs:attribute>
+				<xs:attribute name="isInternal" type="xs:boolean"></xs:attribute>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="Method">
+		<xs:complexContent mixed="false">
+			<xs:extension base="Class">
+				<xs:attribute name="isStatic" type="xs:boolean"></xs:attribute>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="Filtro">
+		<xs:sequence>
+			<xs:element name="Assembly" minOccurs="0" maxOccurs="1">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Title" type="CondicionSimple" minOccurs="0" maxOccurs="1"></xs:element>
+						<xs:element name="Company" type="CondicionSimple" minOccurs="0" maxOccurs="1"></xs:element>
+					</xs:sequence>
+					<xs:attribute name="Configuration" type="xs:string"></xs:attribute>
+					<xs:attribute name="GUID" type="xs:string"></xs:attribute>
+					<xs:attribute name="MinimalVersion" type="xs:string"></xs:attribute>
+					<xs:attribute name="MaxiumVersion" type="xs:string"></xs:attribute>
+					<xs:attribute name="MinimalFileVersion" type="xs:string"></xs:attribute>
+					<xs:attribute name="MaxiumFileVersion" type="xs:string"></xs:attribute>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="NameSpace" type="CondicionSimple" minOccurs="0" maxOccurs="1"></xs:element>
+			<xs:element name="Class" type="Class" minOccurs="0" maxOccurs="1"></xs:element>
+			<xs:element name="Method" type="Method" minOccurs="0" maxOccurs="1"></xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+
+
+	<xs:complexType name="AddressType">
+		<xs:sequence>
+			<xs:element name="House" type="xs:string"/>
+			<xs:element name="Street" type="xs:string"/>
+			<xs:element name="City" type="xs:string"/>
+			<xs:element name="County" type="xs:string"/>
+			<xs:element name="PostCode" type="xs:string"/>
+			<xs:element name="Country" type="CountryCodes"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="CountryCodes">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="UK"/>
+			<xs:enumeration value="US"/>
+			<xs:enumeration value="France"/>
+			<xs:enumeration value="Germany"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+</xs:schema>

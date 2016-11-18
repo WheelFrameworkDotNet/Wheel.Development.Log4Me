@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Log4MeConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Log4Me.Config.xsd">
+	<Writers>
+		<TraceWriter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Log4Me.TraceWriter.xsd" Mode="On">
+			<Includes>
+				<Include>
+					<Method Equals="*"/>
+				</Include>
+			</Includes>
+			<Types>
+				<Type Name="*" Level="*" Mode="On"/>
+			</Types>
+		</TraceWriter>
+	</Writers>	
+</Log4MeConfig>
